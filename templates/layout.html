@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | CupangAI</title>
+
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.png') }}">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+   <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container-fluid navbar-container">
+
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="bi bi-water"></i>
+                IPANG<span>AI</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}">Beranda</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('index') }}#upload">Klasifikasi</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">Tentang</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+</header>
+    <!-- Main -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+ <footer class="footer">
+
+    <div class="container-fluid footer-container">
+
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <h3 class="footer-brand">
+                    <i class="bi bi-water"></i>
+                    Ipang<span>AI</span>
+                </h3>
+
+                <p>
+                    Website klasifikasi jenis ikan cupang berbasis<br>
+                    <strong>Convolutional Neural Network (CNN)</strong><br>
+                    menggunakan Framework Flask.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 d-flex justify-content-lg-end mt-5 mt-lg-0">
+
+                <div class="footer-tech">
+
+                    <h5>Teknologi</h5>
+
+                    <ul class="footer-links">
+
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>TensorFlow</li>
+                        <li>Convolutional Neural Network</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 IpangAI. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>

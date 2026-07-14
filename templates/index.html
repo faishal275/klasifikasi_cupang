@@ -1,0 +1,324 @@
+{% extends "layout.html" %}
+{% block title %}Beranda{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="row align-items-center min-vh-100">
+
+            <div class="col-lg-6">
+
+                <span class="hero-badge">
+                    <i class="bi bi-stars"></i>
+                    Artificial Intelligence
+                </span>
+
+                <h1 class="hero-title">
+                    Klasifikasi
+                    <span>Jenis Ikan Cupang</span>
+                </h1>
+
+                <p class="hero-description">
+                    IpangAI merupakan website berbasis
+                    <strong>Convolutional Neural Network (CNN)</strong>
+                    yang mampu mengidentifikasi jenis ikan cupang secara otomatis
+                    hanya dari sebuah gambar.
+                </p>
+
+                <div class="hero-info">
+
+                    <div class="hero-item">
+
+                        <h3>3</h3>
+
+                        <span>Jenis Cupang</span>
+
+                    </div>
+
+                    <div class="hero-item">
+
+                        <h3>CNN</h3>
+
+                        <span>Deep Learning</span>
+
+                    </div>
+
+                    <div class="hero-item">
+
+                        <h3>AI</h3>
+
+                        <span>Image Classification</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="hero-image">
+
+                    <div class="hero-glow"></div>
+
+                    <img
+                        src="{{ url_for('static', filename='img/hero.png') }}"
+                        alt="Hero Cupang">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="wave">
+
+        <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
+
+            <path
+                fill="#f4f8fd"
+                d="M0,128L60,133.3C120,139,240,149,360,149.3C480,149,600,139,720,128C840,117,960,107,1080,117.3C1200,128,1320,160,1380,176L1440,192L1440,320L0,320Z">
+            </path>
+
+        </svg>
+
+    </div>
+
+</section>
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WHY CHOOSE IpangAI</span>
+
+            <h2>
+                Teknologi AI yang Cepat,
+                Akurat, dan Mudah Digunakan
+            </h2>
+
+            <p>
+                IpangAI memanfaatkan teknologi Deep Learning untuk
+                membantu proses identifikasi jenis ikan cupang hanya
+                dengan mengunggah sebuah gambar.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h4>Convolutional Neural Network</h4>
+
+                    <p>
+                        Model CNN dilatih menggunakan dataset ikan
+                        cupang sehingga mampu mengenali pola visual
+                        secara otomatis dengan tingkat akurasi yang baik.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+
+                    <h4>Prediksi Cepat</h4>
+
+                    <p>
+                        Proses klasifikasi hanya membutuhkan beberapa
+                        detik. Pengguna cukup mengunggah gambar dan
+                        sistem akan memberikan hasil prediksi secara
+                        otomatis.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </div>
+
+                    <h4>Informasi Lengkap</h4>
+
+                    <p>
+                        Selain hasil prediksi, website juga menampilkan
+                        confidence score, probabilitas setiap kelas,
+                        serta deskripsi dan karakteristik ikan cupang.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="statistics">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-box">
+
+                    <h2>900+</h2>
+
+                    <p>Dataset</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-box">
+
+                    <h2>3</h2>
+
+                    <p>Jenis Cupang</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-box">
+
+                    <h2>CNN</h2>
+
+                    <p>Deep Learning</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3 col-6">
+
+                <div class="stat-box">
+
+                    <h2>Flask</h2>
+
+                    <p>Web Framework</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="upload-section" id="upload">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>IMAGE CLASSIFICATION</span>
+
+            <h2>Upload Gambar Ikan Cupang</h2>
+
+            <p>
+                Unggah gambar ikan cupang dengan format JPG, JPEG, atau PNG.
+                Sistem akan menganalisis gambar menggunakan algoritma
+                Convolutional Neural Network (CNN).
+            </p>
+
+        </div>
+
+        <div class="upload-wrapper">
+
+            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
+
+                <label for="imageInput" class="upload-card" id="dropArea">
+
+                    <input
+                        type="file"
+                        name="image"
+                        id="imageInput"
+                        accept="image/*"
+                        hidden
+                        required>
+
+                    <div class="upload-icon">
+                        <i class="bi bi-cloud-arrow-up-fill"></i>
+                    </div>
+
+                    <h3>Drag & Drop</h3>
+
+                    <p>atau klik untuk memilih gambar</p>
+
+                    <small>
+                        Format yang didukung :
+                        JPG • JPEG • PNG
+                    </small>
+
+                </label>
+
+                <div class="preview-wrapper">
+
+                    <img
+                        id="preview"
+                        src=""
+                        alt="Preview"
+                        style="display:none;">
+
+                </div>
+
+                <div class="text-center mt-5">
+
+                    <button type="submit" class="btn-predict">
+
+                        <i class="bi bi-search"></i>
+
+                        Analisis Gambar
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+{% endblock %}

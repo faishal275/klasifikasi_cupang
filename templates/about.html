@@ -1,0 +1,252 @@
+{% extends "layout.html" %}
+{% block title %}Tentang{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="container">
+
+        <span class="page-badge">
+            Tentang Aplikasi
+        </span>
+
+        <h1>
+            Ipang<span>AI</span>
+        </h1>
+
+        <p>
+            Website klasifikasi jenis ikan cupang berbasis
+            <strong>Convolutional Neural Network (CNN)</strong>
+            menggunakan Framework Flask.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="about-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <div class="about-image">
+
+                    <img
+                        src="{{ url_for('static', filename='img/hero.png') }}"
+                        alt="CupangAI">
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="section-title left">
+
+                    <span>ABOUT PROJECT</span>
+
+                    <h2>
+                        Apa itu IpangAI?
+                    </h2>
+
+                </div>
+
+                <p>
+                    IpangAI merupakan website berbasis Artificial Intelligence
+                    yang dirancang untuk membantu proses identifikasi jenis ikan
+                    cupang secara otomatis menggunakan metode
+                    <strong>Convolutional Neural Network (CNN)</strong>.
+                </p>
+
+                <p>
+                    Pengguna hanya perlu mengunggah gambar ikan cupang,
+                    kemudian sistem akan melakukan proses klasifikasi dan
+                    menampilkan hasil prediksi beserta tingkat kepercayaan
+                    (confidence score) dan informasi mengenai jenis ikan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="technology-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>TECHNOLOGY</span>
+
+            <h2>
+                Teknologi yang Digunakan
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-filetype-py"></i>
+
+                    <h4>Python</h4>
+
+                    <p>
+                        Bahasa pemrograman utama.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-window"></i>
+
+                    <h4>Flask</h4>
+
+                    <p>
+                        Framework backend website.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-cpu"></i>
+
+                    <h4>TensorFlow</h4>
+
+                    <p>
+                        Library Deep Learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <h4>CNN</h4>
+
+                    <p>
+                        Model klasifikasi citra.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="workflow-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>WORKFLOW</span>
+
+            <h2>
+                Alur Klasifikasi
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3">
+
+                <div class="step-card">
+
+                    <span>01</span>
+
+                    <h4>Upload</h4>
+
+                    <p>
+                        Upload gambar ikan cupang.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="step-card">
+
+                    <span>02</span>
+
+                    <h4>Preprocessing</h4>
+
+                    <p>
+                        Gambar diubah menjadi ukuran 224×224 piksel.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="step-card">
+
+                    <span>03</span>
+
+                    <h4>Prediksi</h4>
+
+                    <p>
+                        CNN melakukan proses klasifikasi gambar.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="step-card">
+
+                    <span>04</span>
+
+                    <h4>Hasil</h4>
+
+                    <p>
+                        Sistem menampilkan jenis ikan beserta confidence.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+{% block title %}Hasil Klasifikasi{% endblock %}
+
+{% block content %}
+
+<section class="result-header">
+
+    <div class="container">
+
+        <span class="page-badge">
+            HASIL KLASIFIKASI
+        </span>
+
+        <h1>
+            Hasil Prediksi
+            <span>CupangAI</span>
+        </h1>
+
+        <p>
+            Sistem berhasil melakukan klasifikasi menggunakan
+            Convolutional Neural Network (CNN).
+        </p>
+
+    </div>
+
+</section>
+
+<section class="result-section">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-lg-5">
+
+                <div class="glass-card">
+
+                    <h4>Gambar Input</h4>
+
+                    <img
+                        src="{{ url_for('static', filename='uploads/' + image) }}"
+                        class="result-image"
+                        alt="Uploaded Image">
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <div class="glass-card">
+
+                    <span class="result-badge">
+                        {{ result.status }}
+                    </span>
+
+                    <h2 class="result-title">
+                        {{ result.icon }}
+                        {{ result.class }}
+                    </h2>
+
+                    <div class="confidence-value">
+                        {{ result.confidence }}%
+                    </div>
+
+                    <p class="confidence-text">
+                        Tingkat keyakinan model terhadap hasil prediksi.
+                    </p>
+
+                    <div class="progress custom-progress">
+
+                        <div
+                            class="progress-bar"style="width: {{ result.confidence }}%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="probability-section">
+
+    <div class="container">
+
+        <div class="glass-card">
+
+            <h3>
+                Probabilitas Tiap Kelas
+            </h3>
+
+            {% for label, value in result.probabilities.items() %}
+
+            <div class="probability-item">
+
+                <div class="d-flex justify-content-between">
+
+                    <span>{{ label }}</span>
+
+                    <span>{{ value }}%</span>
+
+                </div>
+
+                <div class="progress custom-progress mt-2">
+
+                    <div
+                        class="progress-bar"style="width: {{ value }}%;">
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="information-section">
+
+    <div class="container">
+
+        <div class="glass-card">
+
+            <h3>
+                Informasi Jenis Ikan
+            </h3>
+
+            <h4 class="mt-4">
+                {{ result.icon }}
+                {{ result.class }}
+            </h4>
+
+            <p class="mt-3">
+                {{ result.description }}
+            </p>
+
+            <hr>
+
+            <h5>
+                Karakteristik
+            </h5>
+
+            <ul class="characteristics-list">
+
+                {% for item in result.characteristics %}
+
+                <li>
+
+                    <i class="bi bi-check-circle-fill"></i>
+
+                    {{ item }}
+
+                </li>
+
+                {% endfor %}
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-card">
+
+            <h2>
+                Ingin Mencoba Lagi?
+            </h2>
+
+            <p>
+                Upload gambar ikan cupang lainnya dan lakukan proses
+                klasifikasi kembali menggunakan model CNN.
+            </p>
+
+            <a
+                href="{{ url_for('index') }}#upload"
+                class="btn-primary-custom">
+
+                <i class="bi bi-arrow-repeat"></i>
+
+                Analisis Gambar Lagi
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
