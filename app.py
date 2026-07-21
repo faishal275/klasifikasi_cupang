@@ -8,10 +8,8 @@ import os
 # ==========================================
 
 app = Flask(__name__)
-
 UPLOAD_FOLDER = "static/uploads"
 ALLOWED_EXTENSIONS = {"jpg", "jpeg", "png"}
-
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # Membuat folder upload jika belum ada
