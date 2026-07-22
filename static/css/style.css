@@ -578,6 +578,59 @@ section{
 .workflow-section{
     padding:100px 0;
 }
+.fish-section{
+    padding:100px 0;
+    background:#f8fbff;
+}
+
+.fish-card{
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 12px 35px rgba(0,0,0,.08);
+    transition:.35s;
+    height:100%;
+}
+
+.fish-card:hover{
+    transform:translateY(-10px);
+}
+
+.fish-image{
+    width:100%;
+    height:240px;
+    overflow:hidden;
+}
+
+.fish-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.fish-card:hover .fish-image img{
+    transform:scale(1.08);
+}
+
+.fish-card h4{
+    padding:25px 25px 10px;
+    font-weight:700;
+}
+
+.fish-card p{
+    padding:0 25px;
+    color:#666;
+    line-height:1.8;
+}
+
+.fish-card ul{
+    padding:0 25px 25px 45px;
+}
+
+.fish-card li{
+    margin-bottom:10px;
+}
 
 .about-image img{
     border-radius:25px;

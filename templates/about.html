@@ -76,82 +76,110 @@
     </div>
 
 </section>
-
-<section class="technology-section">
+<section class="fish-section">
 
     <div class="container">
 
         <div class="section-title">
 
-            <span>TECHNOLOGY</span>
+            <span>BETTA FISH</span>
 
-            <h2>
-                Teknologi yang Digunakan
-            </h2>
+            <h2>Jenis Ikan Cupang</h2>
+
+            <p>
+                Sistem IpangAI mampu mengklasifikasikan tiga jenis ikan
+                cupang yang memiliki karakteristik morfologi berbeda.
+            </p>
 
         </div>
 
         <div class="row g-4">
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4">
 
-                <div class="tech-card">
+                <div class="fish-card">
 
-                    <i class="bi bi-filetype-py"></i>
+                    <div class="fish-image">
 
-                    <h4>Python</h4>
+                        <img src="{{ url_for('static', filename='img/DumboEar (3).jpg') }}" alt="Dumbo Ear">
+
+                    </div>
+
+                    <h4>Dumbo Ear</h4>
 
                     <p>
-                        Bahasa pemrograman utama.
+                        Cupang Dumbo Ear memiliki sirip dada yang besar
+                        menyerupai telinga gajah. Jenis ini terkenal
+                        karena tampilannya yang elegan dan unik.
                     </p>
+
+                    <ul>
+
+                        <li>Sirip dada besar</li>
+                        <li>Gerakan anggun</li>
+                        <li>Warna tubuh beragam</li>
+
+                    </ul>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4">
 
-                <div class="tech-card">
+                <div class="fish-card">
 
-                    <i class="bi bi-window"></i>
+                    <div class="fish-image">
 
-                    <h4>Flask</h4>
+                        <img src="{{ url_for('static', filename='img/Halfmoon (2).jpg') }}" alt="Halfmoon">
+
+                    </div>
+
+                    <h4>Halfmoon</h4>
 
                     <p>
-                        Framework backend website.
+                        Cupang Halfmoon memiliki bukaan ekor hingga sekitar
+                        180° sehingga membentuk setengah lingkaran yang
+                        indah saat sirip mengembang.
                     </p>
+
+                    <ul>
+
+                        <li>Ekor membuka 180°</li>
+                        <li>Sirip panjang</li>
+                        <li>Bentuk simetris</li>
+
+                    </ul>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-3 col-md-6">
+            <div class="col-lg-4">
 
-                <div class="tech-card">
+                <div class="fish-card">
 
-                    <i class="bi bi-cpu"></i>
+                    <div class="fish-image">
 
-                    <h4>TensorFlow</h4>
+                        <img src="{{ url_for('static', filename='img/Plakat (78).jpg') }}" alt="Plakat">
 
-                    <p>
-                        Library Deep Learning.
-                    </p>
+                    </div>
 
-                </div>
-
-            </div>
-
-            <div class="col-lg-3 col-md-6">
-
-                <div class="tech-card">
-
-                    <i class="bi bi-diagram-3"></i>
-
-                    <h4>CNN</h4>
+                    <h4>Plakat</h4>
 
                     <p>
-                        Model klasifikasi citra.
+                        Cupang Plakat memiliki sirip pendek dengan tubuh
+                        yang kokoh. Jenis ini dikenal aktif, lincah,
+                        dan memiliki daya tahan tubuh yang baik.
                     </p>
+
+                    <ul>
+
+                        <li>Sirip pendek</li>
+                        <li>Tubuh kokoh</li>
+                        <li>Gerakan cepat</li>
+
+                    </ul>
 
                 </div>
 
@@ -248,5 +276,93 @@
     </div>
 
 </section>
+
+<section class="technology-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>TECHNOLOGY</span>
+
+            <h2>
+                Teknologi yang Digunakan
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-filetype-py"></i>
+
+                    <h4>Python</h4>
+
+                    <p>
+                        Bahasa pemrograman utama.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-window"></i>
+
+                    <h4>Flask</h4>
+
+                    <p>
+                        Framework backend website.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-cpu"></i>
+
+                    <h4>TensorFlow</h4>
+
+                    <p>
+                        Library Deep Learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="tech-card">
+
+                    <i class="bi bi-diagram-3"></i>
+
+                    <h4>CNN</h4>
+
+                    <p>
+                        Model klasifikasi citra.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 
 {% endblock %}

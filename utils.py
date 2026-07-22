@@ -8,14 +8,6 @@ from tensorflow.keras.models import load_model
 
 MODEL_PATH = "model/model_betta_final.keras"
 model = load_model(MODEL_PATH)
-
-# ==============================
-# Threshold
-# ==============================
-
-THRESHOLD = 0.70
-
-
 # ==============================
 # Class Labels
 # ==============================
@@ -98,13 +90,10 @@ def preprocess_image(image_path):
 # ==============================
 # Prediction
 # ==============================
-
+THRESHOLD = 0.70
 def predict_image(image_path):
-
     image = preprocess_image(image_path)
-
     prediction = model.predict(image, verbose=0)[0]
-
     confidence = float(np.max(prediction))
     class_index = int(np.argmax(prediction))
 
