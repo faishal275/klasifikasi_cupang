@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log(messageBox);
     /* ===========================
-       Navbar Scroll
+    Navbar Scroll
     =========================== */
 
     window.addEventListener("scroll", () => {
@@ -26,29 +26,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* ===========================
-       Image Preview
+    Image Preview
     =========================== */
 
     if (imageInput) {
 
         imageInput.addEventListener("change", function () {
 
-            const file = this.files[0];
+    const file = this.files[0];
 
-            if (!file) return;
+    if (!file) return;
 
-            const reader = new FileReader();
+    const allowedTypes = [
+        "image/jpeg",
+        "image/jpg",
+        "image/png"
+    ];
 
-            reader.onload = function (e) {
+    if (!allowedTypes.includes(file.type)) {
+        messageBox.innerHTML = "⚠️ Format file tidak didukung. Gunakan JPG, JPEG, atau PNG.";
+        messageBox.style.display = "block";
+        this.value = "";
+        preview.style.display = "none";
+        return;
+    }
 
-                preview.src = e.target.result;
-                preview.style.display = "block";
+    messageBox.style.display = "none";
 
-            };
+    const reader = new FileReader();
+        reader.onload = function (e) {
+            preview.src = e.target.result;
+            preview.style.display = "block";
 
-            reader.readAsDataURL(file);
+        };
 
-        });
+        reader.readAsDataURL(file);
+
+    });
 
     }
 
