@@ -242,83 +242,61 @@
     </div>
 
 </section>
-
-<section class="upload-section" id="upload">
-
-    <div class="container">
-
-        <div class="section-title">
-
-            <span>IMAGE CLASSIFICATION</span>
-
-            <h2>Upload Gambar Ikan Cupang</h2>
-
+    <section class="upload-section" id="upload">
+        <div class="container">
+            <div class="section-title">
+                <span>IMAGE CLASSIFICATION</span>
+                <h2>Upload Gambar Ikan Cupang</h2>
             <p>
                 Unggah gambar ikan cupang dengan format JPG, JPEG, atau PNG.
                 Sistem akan menganalisis gambar menggunakan algoritma
                 Convolutional Neural Network (CNN).
             </p>
-
-        </div>
-
+            </div>
         <div class="upload-wrapper">
-
-            <form action="{{ url_for('predict') }}" method="POST" enctype="multipart/form-data">
-
-                <label for="imageInput" class="upload-card" id="dropArea">
-
+            <form id="uploadForm"
+                    action="{{ url_for('predict') }}"
+                    method="POST"
+                    enctype="multipart/form-data">
+                    <label for="imageInput" class="upload-card" id="dropArea">
                     <input
                         type="file"
                         name="image"
                         id="imageInput"
                         accept="image/*"
-                        hidden
-                        required>
-
+                        hidden>
                     <div class="upload-icon">
                         <i class="bi bi-cloud-arrow-up-fill"></i>
+                        </div>
+                        <h3>Drag & Drop</h3>
+                        <p>atau klik untuk memilih gambar</p>
+                        <small>
+                            Format yang didukung :
+                            JPG • JPEG • PNG
+                        </small>
+                    </label>
+
+                    <div class="preview-wrapper">
+                        <img
+                            id="preview"
+                            src=""
+                            alt="Preview"
+                            style="display:none;">
                     </div>
 
-                    <h3>Drag & Drop</h3>
+                    <div class="text-center mt-5">
+                        <button type="submit" class="btn-predict">
+                            <i class="bi bi-search"></i>
+                            Analisis Gambar
+                        </button>
+                    </div>
+                <div id="message" class="message-box">
 
-                    <p>atau klik untuk memilih gambar</p>
-
-                    <small>
-                        Format yang didukung :
-                        JPG • JPEG • PNG
-                    </small>
-
-                </label>
-
-                <div class="preview-wrapper">
-
-                    <img
-                        id="preview"
-                        src=""
-                        alt="Preview"
-                        style="display:none;">
-
-                </div>
-
-                <div class="text-center mt-5">
-
-                    <button type="submit" class="btn-predict">
-
-                        <i class="bi bi-search"></i>
-
-                        Analisis Gambar
-
-                    </button>
-
-                </div>
-
-            </form>
-
+                    </div>
+                </form>
+            </div>
         </div>
-
-    </div>
-
-</section>
+    </section>
 
 
 {% endblock %}

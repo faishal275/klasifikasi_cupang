@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     const navbar = document.querySelector(".navbar");
     const imageInput = document.getElementById("imageInput");
     const preview = document.getElementById("preview");
     const dropArea = document.getElementById("dropArea");
 
+    console.log(messageBox);
     /* ===========================
        Navbar Scroll
     =========================== */
@@ -159,3 +159,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+/* ===========================
+   Validasi Upload
+=========================== */
+
+const uploadForm = document.getElementById("uploadForm");
+const messageBox = document.getElementById("message");
+
+if (uploadForm) {
+    uploadForm.addEventListener("submit", function (e) {
+
+        if (imageInput.files.length === 0) {
+
+            e.preventDefault();
+            
+            messageBox.innerHTML = "Silakan pilih gambar terlebih dahulu.";
+
+            messageBox.style.display = "block";
+
+            return;
+
+        }
+        messageBox.style.display = "none";
+    });
+
+}
