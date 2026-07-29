@@ -49,13 +49,7 @@
             <div class="col-lg-7">
 
                 <div class="glass-card">
-
-                    <span class="result-badge">
-                        {{ result.status }}
-                    </span>
-
                     <h2 class="result-title">
-                        {{ result.icon }}
                         {{ result.class }}
                     </h2>
 
@@ -72,9 +66,11 @@
                         <div
                             class="progress-bar"style="width: {{ result.confidence }}%;">
                         </div>
-
-                    </div>
-
+                        
+                    </div>    
+                    <span class="result-badge">
+                            {{result.status }}
+                        </span>
                 </div>
 
             </div>

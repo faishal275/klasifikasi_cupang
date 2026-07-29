@@ -25,7 +25,6 @@ CLASS_NAMES = [
 FISH_INFO = {
 
     "Dumbo Ear": {
-        "icon": "🐘",
         "description": (
             "Cupang Dumbo Ear merupakan salah satu jenis ikan cupang hias "
             "yang memiliki ciri khas berupa sirip dada berukuran besar "
@@ -43,8 +42,7 @@ FISH_INFO = {
     },
 
     "Halfmoon": {
-        "icon": "🌙",
-        "description": (
+            "description": (
             "Cupang Halfmoon memiliki bukaan ekor hingga sekitar "
             "180 derajat sehingga membentuk setengah lingkaran seperti "
             "bulan purnama."
@@ -58,8 +56,7 @@ FISH_INFO = {
     },
 
     "Plakat": {
-        "icon": "⚔️",
-        "description": (
+            "description": (
             "Cupang Plakat memiliki sirip pendek dengan tubuh yang "
             "lebih kekar. Jenis ini terkenal aktif dan agresif."
         ),
@@ -111,9 +108,7 @@ def predict_image(image_path):
         return {
 
             "class": "Tidak Dikenali",
-
-            "icon": "❓",
-
+            
             "confidence": round(confidence * 100, 2),
 
             "status": "Keyakinan Rendah",
@@ -158,9 +153,8 @@ def predict_image(image_path):
     return {
 
         "class": predicted_class,
-        "icon": info["icon"],
         "confidence": round(confidence * 100, 2),
-        "status": status,
+        "status":status,
         "description": info["description"],
         "characteristics": info["characteristics"],
         "probabilities": probabilities
