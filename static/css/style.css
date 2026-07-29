@@ -117,6 +117,19 @@ section{
     color:#fff !important;
     transform:translateY(-3px);
 }
+
+.navbar-toggler{
+    border:1px solid rgba(255,255,255,.2);
+    padding:8px 12px;
+}
+
+.navbar-toggler:focus{
+    box-shadow:none;
+}
+
+.navbar-toggler-icon{
+    filter: brightness(0) invert(1);
+}
 /* ===========================
    Hero
 =========================== */
