@@ -39,9 +39,9 @@ def index():
 # About Page
 # ==========================================
 
-@app.route("/about")
+@app.route("/tentang")
 def about():
-    return render_template("about.html")
+    return render_template("tentang.html")
 
 
 # ==========================================
