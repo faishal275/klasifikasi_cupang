@@ -48,7 +48,7 @@ def about():
 # Prediction
 # ==========================================
 
-@app.route("/predict", methods=["POST"])
+@app.route("/prediksi", methods=["POST"])
 def predict():
 
     # Tidak ada file yang dipilih
